@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        build: [linux-x86, linux-arm-v7, linux-arm-aarch64, macos-x86, macos-aarch64, win-msvc]
+        build: [linux-x86, linux-arm-v7, linux-arm-aarch64, win-msvc]
         include:
           - build: linux-x86
             os: ubuntu-22.04
@@ -45,16 +45,6 @@ jobs:
             cargoc-feat: '--features=vendored-openssl'
             libname: libdeep_filter_ladspa
             libext: so   
-          - build: macos-x86
-            os: macos-12
-            target: x86_64-apple-darwin
-            libname: libdeep_filter_ladspa
-            libext: dylib
-          - build: macos-aarch64
-            os: macos-12
-            target: aarch64-apple-darwin
-            libname: libdeep_filter_ladspa
-            libext: dylib
           - build: win-msvc
             os: windows-2022
             target: x86_64-pc-windows-msvc
