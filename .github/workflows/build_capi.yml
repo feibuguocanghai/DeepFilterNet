@@ -44,17 +44,7 @@ jobs:
             cc: aarch64-linux-gnu-gcc
             cargoc-feat: '--features=vendored-openssl'
             libname: libdeep_filter_ladspa
-            libext: so
-          - build: macos-x86
-            os: macos-12
-            target: x86_64-apple-darwin
-            libname: libdeep_filter_ladspa
-            libext: dylib
-          - build: macos-aarch64
-            os: macos-12
-            target: aarch64-apple-darwin
-            libname: libdeep_filter_ladspa
-            libext: dylib
+            libext: so          
           - build: win-msvc
             os: windows-2022
             target: x86_64-pc-windows-msvc
